@@ -1,0 +1,15 @@
+{
+  "background_color": "blue",
+  "description": "Fais une partie de morpion",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "morpionimg.jpg",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "name": "Jeu Morpion :)",
+  "short_name": "Morpion",
+  "start_url": "/index.html"
+}
