@@ -1,5 +1,5 @@
 
-window.onload = () => {
+window.onload = () => { //pour connecter au service worker
   'use strict';
 
   if ('serviceWorker' in navigator) {
@@ -7,7 +7,7 @@ window.onload = () => {
              .register('./sw.js');
   }
 }
-function estValide(button)
+function estValide(button)//pour voir si le bouton a été cliqué ou pas
 {
      return button.innerHTML.length == 0;
 }
@@ -17,7 +17,7 @@ function setSymbol(btn, symbole)
      btn.innerHTML = symbole;
 }
 
-function rechercherVainqueur(pions, joueurs, tour)
+function rechercherVainqueur(pions, joueurs, tour) //il vérifie case par case si la personne a gagné
 {
      if (pions[0].innerHTML == joueurs[tour] &&
          pions[1].innerHTML == joueurs[tour] &&
@@ -100,7 +100,7 @@ function rechercherVainqueur(pions, joueurs, tour)
       }
 }
 
-function matchNul(pions)
+function matchNul(pions) //Si le résultat est "égalité"
 {
      for (var i = 0, len = pions.length; i < len; i++)
      {
@@ -111,7 +111,7 @@ function matchNul(pions)
      return true;
 }
 
-var Afficheur = function(element)
+var Afficheur = function(element) //Ajout du texte
 {
      var affichage = element;
 
@@ -168,4 +168,4 @@ function main()
      }
 }
 
-main();
+main(); //Pour lancer l'application
